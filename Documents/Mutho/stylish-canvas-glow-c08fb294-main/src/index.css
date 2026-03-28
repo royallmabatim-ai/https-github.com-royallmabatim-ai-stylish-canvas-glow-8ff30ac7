@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 15%;
+
+    /* Green from logo */
+    --primary: 100 60% 40%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 100 55% 50%;
+    --primary-dark: 100 65% 30%;
+
+    /* Red/Orange from logo */
+    --secondary: 10 80% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
+
+    /* Purple from logo */
+    --accent: 280 30% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 100 60% 40%;
+
+    --radius: 0.75rem;
+    
+    /* Green-Red-Purple gradients matching logo */
+    --gradient-primary: linear-gradient(135deg, hsl(100 60% 40%), hsl(10 80% 50%), hsl(280 30% 50%));
+    --gradient-hero: linear-gradient(135deg, hsl(100 60% 40% / 0.9), hsl(10 80% 50% / 0.85));
+    --gradient-accent: linear-gradient(135deg, hsl(10 80% 50%), hsl(280 30% 50%));
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 20px -3px rgb(0 0 0 / 0.15);
+    --shadow-primary: 0 10px 25px -5px hsl(100 60% 40% / 0.5);
+    --shadow-glow: 0 0 40px hsl(10 80% 50% / 0.3);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 100 60% 40%;
+  }
+
+  .dark {
+    --background: 240 10% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 100 55% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 100 50% 55%;
+    --primary-dark: 100 60% 35%;
+
+    --secondary: 10 80% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 10% 15%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 280 30% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 10% 20%;
+    --input: 240 10% 20%;
+    --ring: 100 55% 45%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(100 55% 45%), hsl(10 80% 55%), hsl(280 30% 55%));
+    --gradient-hero: linear-gradient(135deg, hsl(100 55% 45% / 0.9), hsl(10 80% 55% / 0.85));
+    --gradient-accent: linear-gradient(135deg, hsl(10 80% 55%), hsl(280 30% 55%));
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 100 55% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 100 55% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+  
+  .shadow-primary {
+    box-shadow: var(--shadow-primary);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+}
