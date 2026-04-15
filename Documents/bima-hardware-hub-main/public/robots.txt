@@ -1,0 +1,23 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api
+Disallow: /private
+
+# Specific crawl delays
+User-agent: Googlebot
+Crawl-delay: 0
+User-agent: Bingbot
+Crawl-delay: 1
+User-agent: Twitterbot
+Allow: /
+User-agent: facebookexternalhit
+Allow: /
+
+# Sitemap
+Sitemap: https://www.bomamabati.co.ke/sitemap.xml
+Allow: /
+
+User-agent: *
+Allow: /

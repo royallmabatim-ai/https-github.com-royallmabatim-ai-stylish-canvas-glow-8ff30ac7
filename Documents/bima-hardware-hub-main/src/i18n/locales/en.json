@@ -1,0 +1,39 @@
+{
+  "common": {
+    "home": "Home",
+    "about": "About Us",
+    "products": "Our Products",
+    "blog": "Blog",
+    "contact": "Contact",
+    "quote": "Get Quote",
+    "callNow": "Call Now"
+  },
+  "hero": {
+    "title": "Affordable, Durable Mabati in Nairobi",
+    "description": "We supply high-quality roofing sheets at the best prices in Kenya. Strong, stylish, and built to last.",
+    "requestQuote": "Request a Quote",
+    "getQuote": "Get Free Quote",
+    "getMyQuote": "Get My Free Quote"
+  },
+  "quote": {
+    "fullName": "Your Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "product": "Product Interest",
+    "location": "Delivery Location",
+    "requirements": "Additional Requirements",
+    "callback": "Yes, I want a callback",
+    "submit": "Submit Quote",
+    "submitting": "Submitting...",
+    "success": "Quote submitted successfully!",
+    "error": "Failed to submit quote"
+  },
+  "products": {
+    "corrugated": "Corrugated Mabati",
+    "boxProfile": "Box Profile Mabati",
+    "colored": "Colored Mabati",
+    "tile": "Boma Tile",
+    "vass": "Boma Vass",
+    "euroZ": "Boma Euro Z"
+  }
+}

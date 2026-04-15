@@ -1,0 +1,95 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Quote {
+  id                String    @id @default(cuid())
+  name              String
+  email             String
+  phone             String
+  productInterest   String
+  location          String
+  requirements      String?
+  wantCallback      Boolean   @default(false)
+  status            String    @default("pending") // pending, contacted, quoted, cancelled
+  quotedPrice       Float?
+  notes             String?
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+
+  @@index([email])
+  @@index([status])
+  @@index([createdAt])
+}
+
+model ContactMessage {
+  id        String    @id @default(cuid())
+  name      String
+  email     String
+  phone     String
+  subject   String
+  message   String
+  status    String    @default("unread") // unread, read, responded
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([email])
+  @@index([status])
+  @@index([createdAt])
+}
+
+model Product {
+  id          String    @id @default(cuid())
+  name        String    @unique
+  description String
+  price       Float
+  gauge       String    // 0.28mm, 0.30mm
+  profile     String    // corrugated, box-profile, etc
+  colors      String[]
+  warranty    String
+  image       String?
+  available   Boolean   @default(true)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@index([available])
+}
+
+model Order {
+  id              String    @id @default(cuid())
+  orderNumber     String    @unique
+  customerEmail   String
+  items           String    @default("[]") // JSON array
+  totalAmount     Float
+  status          String    @default("pending") // pending, confirmed, shipped, delivered, cancelled
+  deliveryLocation String
+  notes           String?
+  paymentStatus   String    @default("unpaid")
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  @@index([customerEmail])
+  @@index([status])
+  @@index([createdAt])
+}
+
+model Admin {
+  id        String    @id @default(cuid())
+  email     String    @unique
+  password  String
+  name      String
+  role      String    @default("admin") // admin, super_admin
+  active    Boolean   @default(true)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([email])
+}

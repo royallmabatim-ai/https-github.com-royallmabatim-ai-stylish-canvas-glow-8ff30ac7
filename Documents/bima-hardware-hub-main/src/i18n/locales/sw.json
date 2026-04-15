@@ -1,0 +1,39 @@
+{
+  "common": {
+    "home": "Nyumbani",
+    "about": "Kuhusu Sisi",
+    "products": "Bidhaa Zetu",
+    "blog": "Blogi",
+    "contact": "Wasiliana",
+    "quote": "Ombi la Zabuni",
+    "callNow": "Piga Simu Sasa"
+  },
+  "hero": {
+    "title": "Mabati Rahisi na Imara Nairobi",
+    "description": "Tunabigisha mabati ya ubora juu kwa bei nzuri sana Kenya. Imara, nzuri, na inastahili.",
+    "requestQuote": "Omba Zabuni",
+    "getQuote": "Omba Zabuni Libre",
+    "getMyQuote": "Jipatie Zabuni Yangu Libre"
+  },
+  "quote": {
+    "fullName": "Jina Lako Kamili",
+    "email": "Habari Barua",
+    "phone": "Namba ya Simu",
+    "product": "Bidhaa Unayopigia",
+    "location": "Mahali pa Kumkomeza",
+    "requirements": "Mahitaji Mengine",
+    "callback": "Ndiyo, nataka kupokea simu",
+    "submit": "Tuma Zabuni",
+    "submitting": "Inatumiwa...",
+    "success": "Zabuni ilitumwa!",
+    "error": "Zabuni haikusambaza"
+  },
+  "products": {
+    "corrugated": "Mabati Ya Ufa",
+    "boxProfile": "Mabati Ya Sanduku",
+    "colored": "Mabati Ya Rangi",
+    "tile": "Boma Tile",
+    "vass": "Boma Vass",
+    "euroZ": "Boma Euro Z"
+  }
+}
